@@ -1,16 +1,15 @@
 package state;
 
-public class S0_Start extends State {
+public class S0_Start implements State {
 
 	@Override
-	void create(StateM sm) {
-		sm.setCurrentState(this);
-		
+	public void create(StateM sm) {
+		sm.setCurrentState(new S1_Idle());		
 	}
 
 	@Override
-	void open(StateM sm) {
-		// TODO Auto-generated method stub
+	public void open(StateM sm) {
+		System.out.println("NOT VALID STATE FOR OPERATION TO TAKE PLACE");
 	}
 
 }

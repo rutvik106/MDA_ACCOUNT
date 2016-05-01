@@ -1,5 +1,7 @@
 package state;
 
+import account.Account;
+import factory.AbstractFactory;
 import operations.OP;
 
 public class StateM {
@@ -9,8 +11,8 @@ public class StateM {
 	State currentState;
 	
 	
-	public StateM() {
-		op=new OP();
+	public StateM(AbstractFactory factory) {
+		op=new OP(factory);
 		currentState=new S0_Start();
 	}
 	
@@ -18,4 +20,8 @@ public class StateM {
 		currentState=s;
 	}
 
+	public void create(){
+		currentState.create(this);
+	}
+	
 }
