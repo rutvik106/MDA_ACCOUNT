@@ -20,8 +20,12 @@ public class StateM {
 		currentState=s;
 	}
 
-	public void create(){
-		currentState.create(this);
+	public void open(){
+		currentState.open(this);
+	}
+	
+	public void login(){
+		currentState.login(this);
 	}
 	
 }

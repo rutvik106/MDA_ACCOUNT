@@ -10,8 +10,12 @@ public class MDA_EFSM {
 		sm=new StateM(factory);
 	}
 	
-	public void create(){
-		sm.create();
+	public void open(){
+		sm.open();
+	}
+	
+	public void login(){
+		sm.login();
 	}
 	
 

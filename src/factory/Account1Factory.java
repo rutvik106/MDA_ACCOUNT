@@ -18,7 +18,14 @@ public class Account1Factory extends AbstractFactory {
 		ds1=new DS();
 		return new Account1();
 	}
+	
+	public DS getDataStore(){
+		return ds1;
+	}
 
+	void getA1(){
+		
+	}
 	
 	
 	
