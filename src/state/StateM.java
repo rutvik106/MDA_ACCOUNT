@@ -1,6 +1,5 @@
 package state;
 
-import account.Account;
 import factory.AbstractFactory;
 import operations.OP;
 
@@ -12,6 +11,7 @@ public class StateM {
 	
 	
 	public StateM(AbstractFactory factory) {
+		System.out.println("CREATED STATE MACHINE");
 		op=new OP(factory);
 		currentState=new S0_Start();
 	}
@@ -26,6 +26,10 @@ public class StateM {
 	
 	public void login(){
 		currentState.login(this);
+	}
+	
+	public void withdraw(){
+		currentState.withdraw(this);
 	}
 	
 }

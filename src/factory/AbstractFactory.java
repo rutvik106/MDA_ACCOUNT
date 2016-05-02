@@ -4,8 +4,8 @@ import account.Account2;
 
 public abstract class AbstractFactory {
 	
-	public abstract Account1 getAccount1();
+	public abstract Account1Factory getAccount1Factory();
 	
-	public abstract Account2 getAccount2();
+	public abstract Account2Factory getAccount2Factory();
 
 }

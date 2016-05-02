@@ -1,27 +1,21 @@
 package state;
 
-public class S1_Idle implements State {
+public class S2_CheckPin implements State {
 
 	@Override
 	public void login(StateM sm) {
-		// TODO Auto-generated method stub
-		System.out.println("LOGING IN");
-	}
-
-	@Override
-	public void open(StateM sm) {
-		// TODO Auto-generated method stub
-		System.out.println("INVALID STATE ACCOUTN ALREADY OPEN PLEASE LOGIN");
-	}
-
-	@Override
-	public void withdraw(StateM sm) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void logout(StateM sm) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void open(StateM sm) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -34,6 +28,12 @@ public class S1_Idle implements State {
 
 	@Override
 	public void deposit(StateM sm) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void withdraw(StateM sm) {
 		// TODO Auto-generated method stub
 		
 	}

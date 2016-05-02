@@ -2,29 +2,33 @@ package factory;
 import account.Account1;
 import account.Account2;
 import datastore.DS;
+import strategies.A2_1;
 
 public class Account1Factory extends AbstractFactory {
 	
 	@Override
-	public Account2 getAccount2() {
+	public Account2Factory getAccount2Factory() {
 		return null;
 	}
 	
-	DS ds1;
-
-	@Override
-	public Account1 getAccount1() {
-		System.out.println("Inside getAccount1");
-		ds1=new DS();
-		return new Account1();
+	DS ds;
+	
+	public Account1Factory() {
+		System.out.println("Initializing Account1 Factory");
+		ds=new DS();
 	}
 	
 	public DS getDataStore(){
-		return ds1;
+		return ds;
 	}
 
-	void getA1(){
-		
+	public A2_1 getA2(){
+		return new A2_1(ds);
+	}
+
+	@Override
+	public Account1Factory getAccount1Factory() {
+		return this;
 	}
 	
 	

@@ -24,28 +24,21 @@ public class TestRun {
 
 		int ac=s.nextInt();
 
-
-
 		if(ac==1){
 
-			AbstractFactory factory=FactoryProducer.getFactory("ACCOUNT1FACTORY");
-
-			MDA_EFSM m=new MDA_EFSM(factory);
-
-			DS ds1=new factory.Account1Factory().getDataStore();
-
-			System.out.println("==================ACCOUNT 1=================== ");
-
-			System.out.println("1. Open");
-
-			System.out.println("2. Login");
-
-			System.out.println("0. Exit");
+			Account1 a1=new Account1();
 
 			int sel=-1;
 
 			while(sel!=0){
-				
+				System.out.println("==================ACCOUNT 1=================== ");
+
+				System.out.println("1. Open");
+
+				System.out.println("3. Withdraw");
+
+				System.out.println("0. Exit");
+
 				System.out.println("\n");
 
 				System.out.print("Enter Your Choice: ");
@@ -55,13 +48,24 @@ public class TestRun {
 				switch (sel) {
 
 				case 1: System.out.println("OPENNING ACCOUNT IN AC 1");
-				m.open();
+				System.out.println("Enter Desire PIN(string):");
+				String p=s.next();
+				System.out.println("Enter Desire id(string):");
+				String y=s.next();
+				System.out.println("Enter Desire balance(float):");
+				float a=s.nextFloat();
+				a1.Open(p, y, a);
 
 				break;
 
 				case 2: System.out.println("LOGIN ACCOUNT IN AC 1");
-				m.login();					
 
+				break;
+
+				case 3: System.out.println("WITHDRAW FORM ACCOUNT 1");
+				System.out.println("Enter Ammount to Withdraw");
+				float w=s.nextFloat();
+				a1.withdraw(w);
 				break;
 
 				}
